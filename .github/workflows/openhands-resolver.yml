@@ -84,11 +84,6 @@ jobs:
         )
       )
     runs-on: "${{ inputs.runner || 'ubuntu-latest' }}"
-    env:
-      LLM_NUM_RETRIES: 1
-      LLM_RETRY_MIN_WAIT: 1
-      LLM_RETRY_MAX_WAIT: 2
-      LLM_TIMEOUT: 300
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
